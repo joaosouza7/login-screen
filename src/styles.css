@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #111;
+}
+
+.container-bg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-bg h3 {
+    color: azure;
+    font-size: 2rem;
+}
+
+.container-bg .img {
+    margin-top: 2.3rem;
+    padding: 1rem;
+    width: 450px;
+}
+
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.wrap-login {
+    width: 390px;
+    background-color: #333;
+    border-radius: .2rem;
+
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: azure;
+    font-weight: 700;
+    
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-form-title span {
+    margin-left: .5rem;
+}
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #ADADAD;
+    margin-bottom: 2rem;
+}
+
+.input {
+    font-size: .9rem;
+    color: #FFF;
+    line-height: 1.2;
+    border: none;
+    display: block;
+    padding: 0 5px;
+
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    outline: none;
+}
+
+.focus-input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+    color: #ADADAD;
+}
+
+.focus-input::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.focus-input::after {
+    font-size: .9rem;
+    color: #999999;
+    line-height: 1.2;
+
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    padding-left: 5px;
+
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+.input:focus + .focus-input::after {
+    top: -15px;
+}
+
+.input:focus + .focus-input::before {
+    width: 100%;
+}
+
+.has-val + .focus-input::after {
+    top: -15px;
+}
+
+.has-val + .focus-input::before {
+    width: 100%;
+}
+
+.container-form-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.8rem;
+}
+
+.login-btn {
+    font-size: 1rem;
+    border: none;
+    border-radius: .2rem;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50px;
+
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.3rem;
+}
+
+.txt-1,
+.txt-2 {
+    font-size: .9rem;
+    color: #ADADAD;
+    line-height: 1.5;    
+}
+
+.txt-2 {
+    color: #6a7dfe;
+    text-decoration: none;
+    margin-left: .3rem;
+}
+
+@media (max-width: 987px) {
+    .container-bg {
+        display: none;
+    }
+}
